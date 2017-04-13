@@ -1,0 +1,73 @@
+/* fonts */
+*{
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px!important;
+}
+
+h2{
+  font-family: 'Lobster', cursive;
+  font-size: 60px!important;
+}
+
+#content {
+  min-height: 75.2vh;
+}
+
+.btn-login{
+  margin: 0 0 15px 0;
+}
+ /* footer style */
+.page-footer {
+  background-color: #4db6ac!important;
+}
+/*
+.footer-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}*/
+
+/* other customization */
+nav{
+  background-color: #4db6ac!important;
+  font-size: 20px !important;
+}
+
+li{
+  font-size: 22px;
+}
+
+
+
+/* inputs without arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.unstyled::-webkit-calendar-picker-indicator,
+.unstyled::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.fade-note-single {
+    background-color: white;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes example {
+    from {background-color: #80cbc4;}
+    to {background-color: white;}
+}
+
+.ol-list{
+  padding-left: 0px;
+}
