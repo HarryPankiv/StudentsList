@@ -51,7 +51,8 @@ export default class NotesForm extends React.Component {
                ref="name"
                placeholder="Name"
                maxLength="10"
-               pattern=".{a-zA-Z}"
+              //  pattern="[A-Za-z]{10}"
+              //  required title="only letters allowed"
                required/>
 
         <input className="col s2"
@@ -59,6 +60,8 @@ export default class NotesForm extends React.Component {
                ref="surname"
                placeholder="Surname"
                maxLength="10"
+              //  pattern=".{a, Z}[A-Za-z]{10}"
+              //  required title="only letters allowed"
                required/>
 
         <input className="col s2 datepicker unstyled"
@@ -74,7 +77,7 @@ export default class NotesForm extends React.Component {
                ref="mark1"
                min="1" max="5"
                placeholder="1"
-               pattern=".{1,5}"
+               pattern=".{1,5}{1}"
                maxLength="1"
               //  value={this.state.value}
               //  onInput={this.handleChange.bind(this)}
@@ -85,7 +88,7 @@ export default class NotesForm extends React.Component {
                ref="mark2"
                min="1" max="5"
                placeholder="2"
-               pattern=".{1,5}"
+               pattern=".{1,5}{1}"
                maxLength="1"
               //  value={this.state.value}
               //  onInput={this.handleChange.bind(this)}
@@ -96,7 +99,7 @@ export default class NotesForm extends React.Component {
                ref="mark3"
                min="1" max="5"
                placeholder="3"
-               pattern=".{1,5}"
+               pattern=".{1,5}{1}"
                maxLength="1"
               //  value={this.state.value}
               //  onInput={this.handleChange.bind(this)}
@@ -107,7 +110,7 @@ export default class NotesForm extends React.Component {
                ref="mark4"
                min="1" max="5"
                placeholder="4"
-               pattern=".{1,5}"
+               pattern=".{1,5}{1}"
                maxLength="1"
               //  value={this.state.value}
               //  onInput={this.handleChange.bind(this)}

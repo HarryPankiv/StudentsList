@@ -19,7 +19,7 @@ export default class Navbar extends React.Component {
                 <Link to="/home">Home</Link>
             </li>
             <li className="col s2 nav-item">
-                <Link to="/about">About</Link>
+                <Link to="/filtered-list">Filtered List</Link>
             </li>
             <li className="col s2 nav-item">
                 <Link to="/instructions">Instructions</Link>

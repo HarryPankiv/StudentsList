@@ -9,8 +9,17 @@ h2{
   font-size: 60px!important;
 }
 
+h4{
+  font-family: 'Lobster', cursive;
+  font-size: 38px!important;
+}
+
 #content {
   min-height: 75.2vh;
+}
+
+.button-margin {
+  margin: 0 15px!important;
 }
 
 .btn-login{

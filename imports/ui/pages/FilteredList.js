@@ -1,4 +1,5 @@
-import { Meteor } from 'meteor/meteor'
+import { Meteor } from 'meteor/meteor';
+import { Mongo } from 'meteor/mongo';
 import React from 'react';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 import { browserHistory } from 'react-router';
@@ -32,10 +33,20 @@ export default class FilteredList extends TrackerReact(React.Component) {
     return Notes.find({$or :[{ mark1: {$ne: "3"}, mark3: {$ne: "3"} }]}).fetch();
   }
 
+  findOldestStudent() {
+    let oldest = [Notes.findOne( {}, { sort: {date:-1}})];
+    return oldest;
+  }
+
+  findYoungestStudent() {
+    let youngest = [Notes.findOne( {}, { sort: {date:1}})];
+    return youngest;
+  }
+
   render() {
     return (
       <div className="flex-container">
-        <h2 className="center-align flex-item">Students without 3 in 1st and 3rd exam</h2>
+        <h4 className="center-align flex-item">Students without 3 in 1st and 3rd exam:</h4>
         <ul className="row container flex-item">
           <li className="col s2 flex-item">Name</li>
           <li className="col s2 flex-item">Surname</li>
@@ -47,6 +58,16 @@ export default class FilteredList extends TrackerReact(React.Component) {
           <li className="col s1 flex-item">Average</li>
         </ul>
         {this.notes().map((note) => {
+          return <NoteSingle className="flex-item" key={note._id} note={note} />
+        })}
+
+        <h4 className="center-align">Youngest student in the list:</h4>
+        {this.findYoungestStudent().map( (note) => {
+          return <NoteSingle className="flex-item" key={note._id} note={note} />
+        })}
+
+        <h4 className="center-align">Oldest student in the list:</h4>
+        {this.findOldestStudent().map( (note) => {
           return <NoteSingle className="flex-item" key={note._id} note={note} />
         })}
         {this.props.notes}
